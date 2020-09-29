@@ -1,0 +1,26 @@
+CLASS SPECIALIZATIONS
+damage
+defence
+healing
+mobility
+buff
+debuff
+
+DRUID
+Feypicked - 40% healing, 20% buff, 40% {{companion.specialization}}
+<spellcaster> - 80% healing, 20% buff
+<shapeshifter> - 40% defence, 40% healing, 20% buff
+
+PALADIN
+<defender build> - 20% healing, 60% defence, 20% damage
+<aoe build> - 20% healing, 20% defence, 60% damage
+<smiting/single target build> - 20% healing, 20% defence, 60% damage
+<charisma/nonviolent build> - 30% healing, 30% defence, 20% damage, 20% buffs
+
+SORCERER
+Storm - 80% damage, 20% mobility
+
+WIZARD
+Evocation - 100% damage
+Abjuration - 60% defence, 40% damage
+Divination - 40% debuff, 20% buff, 40% damage
