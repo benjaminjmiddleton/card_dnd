@@ -32,8 +32,8 @@ def read_cards(wb_path):
             spell_lv = None
         dnd_class = sheet.cell_value(i, 3).strip()
         class_list = dnd_class.split(", ")
-        if dnd_class == "All":
-            class_list = CardWriter.CLASSES
+        # if dnd_class == "All":
+        #     class_list = CardWriter.CLASSES
         attribute = sheet.cell_value(i, 5).strip()
         attribute_list = attribute.split(", ")
         if attribute == "All":

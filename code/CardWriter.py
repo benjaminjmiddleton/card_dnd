@@ -30,8 +30,7 @@ KEYWORDS_BOLD = [
     "INT",
     "WIS",
     "CHA",
-    "SCM",
-    "X"
+    "X",
 ]
 for i in range(len(KEYWORDS_BOLD)):
     KEYWORDS_BOLD.append(KEYWORDS_BOLD[i]+".")
@@ -47,8 +46,18 @@ CLASSES = [
     "RGR",
     "ROG",
     "SOR",
-    "WIZ"
+    "WIZ",
+    "All"
 ]
+SCM_DICT = {
+    "BRD":"CHA",
+    "CLR":"WIS",
+    "DRD":"WIS",
+    "PAL":"CHA",
+    "RGR":"WIS",
+    "SOR":"CHA",
+    "WIZ":"INT",
+}
 
 def generate_cards(card_list, folder_name):
     class_font = ImageFont.truetype("arial.ttf", 36)
@@ -60,7 +69,10 @@ def generate_cards(card_list, folder_name):
     desc_italic = ImageFont.truetype("ariali.ttf", 24)
     spell_font = ImageFont.truetype("arial.ttf", 20)
     
-    rmtree("assets/cards/"+folder_name)
+    if not os.path.exists("assets/cards"):
+        os.mkdir("assets/cards")
+    if os.path.exists("assets/cards/"+folder_name):
+        rmtree("assets/cards/"+folder_name)
 
     try:
         os.mkdir("assets/cards/"+folder_name)
@@ -72,6 +84,10 @@ def generate_cards(card_list, folder_name):
             os.mkdir("assets/cards/"+folder_name+"/"+cl)
         except FileExistsError:
             pass
+    try:
+        os.mkdir("assets/cards/"+folder_name+"/Other")
+    except FileExistsError:
+        pass
 
     for card in card_list:
         img = Image.new('RGB', (W, H), color='#FFFFFF')
@@ -110,7 +126,10 @@ def generate_cards(card_list, folder_name):
         text_width, text_height = canvas.textsize(card.attribute, font=attr_font)
         x = W - text_width - 2
         y = H - text_height - 2
-        canvas.text((x, y), card.attribute, font=attr_font, fill='#AAAAAA')
+        if card.attribute == "SCM":
+            canvas.text((x, y), SCM_DICT[card.dnd_class], font=attr_font, fill='#AAAAAA')
+        else:
+            canvas.text((x, y), card.attribute, font=attr_font, fill='#AAAAAA')
 
         # draw description
         desc_list = card.desc.split(' ')
@@ -142,6 +161,8 @@ def generate_cards(card_list, folder_name):
             y = H / 2 + line_y
             line_y += text_height
             for word_to_draw in line:
+                if word_to_draw in SCM_DICT:
+                    word_to_draw = SCM_DICT[word_to_draw]
                 if word_to_draw in NATURALS_TO_100 or word_to_draw in KEYWORDS_BOLD:
                     text_width, text_height = canvas.textsize(word_to_draw+' ', font=desc_bold)
                     canvas.text((x, y), word_to_draw, font=desc_bold, fill='#AAAAAA')
@@ -164,7 +185,10 @@ def generate_cards(card_list, folder_name):
             canvas.text((x, y), card.spell_lv, font=spell_font, fill='#AAAAAA')
 
         # save image
-        img_path = "assets/cards/"+folder_name+"/"+card.dnd_class+"/"+card.name+".png"
+        if card.dnd_class in CLASSES:
+            img_path = "assets/cards/"+folder_name+"/"+card.dnd_class+"/"+card.name+".png"
+        else:
+            img_path = "assets/cards/"+folder_name+"/Other/"+card.name+".png"
         cnt = 1
         while(os.path.exists(img_path)):
             img_path = "assets/cards/"+folder_name+"/"+card.dnd_class+"/"+card.name+str(cnt)+".png"
