@@ -7,9 +7,9 @@ buff
 debuff
 
 DRUID
-Feypicked - 40% healing, 20% buff, 40% {{companion.specialization}}
-<spellcaster> - 80% healing, 20% buff
-<shapeshifter> - 40% defence, 40% healing, 20% buff
+Feypicked - healing, buff, 40% companion specialization
+<spellcaster> - healing, buff
+<shapeshifter> - defence, healing, buff
 
 PALADIN
 <defender build> - 20% healing, 60% defence, 20% damage
@@ -18,7 +18,7 @@ PALADIN
 <charisma/nonviolent build> - 30% healing, 30% defence, 20% damage, 20% buffs
 
 SORCERER
-Storm - 80% damage, 20% mobility
+Storm - damage, mobility
 
 WIZARD
 Evocation - 100% damage

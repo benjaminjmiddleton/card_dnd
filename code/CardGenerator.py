@@ -34,11 +34,11 @@ def read_cards(wb_path):
         class_list = dnd_class.split(", ")
         # if dnd_class == "All":
         #     class_list = CardWriter.CLASSES
-        attribute = sheet.cell_value(i, 5).strip()
+        attribute = sheet.cell_value(i, 4).strip()
         attribute_list = attribute.split(", ")
         if attribute == "All":
             attribute_list = ATTRIBUTES
-        description = sheet.cell_value(i, 6).strip()
+        description = sheet.cell_value(i, 5).strip()
 
         for cl in class_list:
             for att in attribute_list:
