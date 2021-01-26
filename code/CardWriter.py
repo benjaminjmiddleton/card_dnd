@@ -161,8 +161,8 @@ def generate_cards(card_list, folder_name):
             y = H / 2 + line_y
             line_y += text_height
             for word_to_draw in line:
-                if word_to_draw in SCM_DICT:
-                    word_to_draw = SCM_DICT[word_to_draw]
+                if word_to_draw == "SCM":
+                    word_to_draw = SCM_DICT[card.dnd_class]
                 if word_to_draw in NATURALS_TO_100 or word_to_draw in KEYWORDS_BOLD:
                     text_width, text_height = canvas.textsize(word_to_draw+' ', font=desc_bold)
                     canvas.text((x, y), word_to_draw, font=desc_bold, fill='#AAAAAA')
