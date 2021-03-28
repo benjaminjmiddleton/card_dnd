@@ -1,0 +1,43 @@
+CARD DND TODO
+
+balance numbers on cards
+
+add basic movement pack
+
+add gun class
+
+story stuff
+
+design cards for the non-basic packs
+
+color the cards based on their card pack and stat
+
+SKILL CHECKS?
+
+not really a to-do, but
+CLASS SPECIALIZATIONS
+damage
+defence
+healing
+mobility
+buff
+debuff
+
+DRUID
+Feypicked - 20% healing, 20% buff, 40% damage, 20% defence
+<spellcaster> - 60% healing, 20% damage, 20% buff
+<shapeshifter> - 40% defence, 20% healing, 20% buff, 20% damage
+
+PALADIN
+<defender build> - 20% healing, 60% defence, 20% damage
+<aoe build> - 20% healing, 20% defence, 60% damage
+<smiting/single target build> - 20% healing, 20% defence, 60% damage
+<charisma/nonviolent build> - 40% healing, 20% defence, 40% debuff
+
+SORCERER
+Storm - 50% damage, 50% mobility
+
+WIZARD
+Evocation - 100% damage
+Abjuration - 60% defence, 40% damage
+Divination - 30% debuff, 30% buff, 40% damage

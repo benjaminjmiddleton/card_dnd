@@ -1,3 +1,8 @@
+# CardGenerator.py
+# 
+# Run this script from the code folder to delete assets/cards/ and re-generate them.
+# 
+
 import CardWriter
 import xlrd
 
@@ -11,10 +16,10 @@ ATTRIBUTES = [
 ]
 
 class Card:
-    def __init__(self, name, card_type, spell_lv, dnd_class, attribute, desc):
+    def __init__(self, name, card_type, pack, dnd_class, attribute, desc):
         self.name = name
         self.card_type = card_type
-        self.spell_lv = spell_lv
+        self.pack = pack
         self.dnd_class = dnd_class
         self.attribute = attribute
         self.desc = desc
@@ -27,9 +32,9 @@ def read_cards(wb_path):
     for i in range(1, sheet.nrows):
         name = sheet.cell_value(i, 0).strip()
         card_type = sheet.cell_value(i, 1).strip()
-        spell_lv = sheet.cell_value(i, 2).strip()
-        if spell_lv == '-':
-            spell_lv = None
+        pack = str(sheet.cell_value(i, 2)).strip()
+        if pack == '-':
+            pack = None
         dnd_class = sheet.cell_value(i, 3).strip()
         class_list = dnd_class.split(", ")
         # if dnd_class == "All":
@@ -45,7 +50,7 @@ def read_cards(wb_path):
                 att = att.strip()
                 cl = cl.strip()
 
-                card = Card(name, card_type, spell_lv, cl, att, description)
+                card = Card(name, card_type, pack, cl, att, description)
                 card_list.append(card)
     return card_list
 
