@@ -1,6 +1,6 @@
 # CardGenerator.py
 # 
-# Run this script from the code folder to delete assets/cards/ and re-generate them.
+# Run this script from the code folder to delete assets/cards/all_cards and re-generate the cards.
 # 
 
 import CardWriter

@@ -1,3 +1,8 @@
+# CardWriter.py
+#
+# Contains methods for generating card images.
+#
+
 from PIL import Image, ImageDraw, ImageFont
 import os
 from shutil import rmtree
