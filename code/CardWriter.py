@@ -23,7 +23,19 @@ KEYWORDS_ITALIC = [
     "Prevent",
     "Simple",
     "Unreactable",
-    "Useless"
+    "Useless",
+    "Wound",
+    "Charge",
+    "Ward",
+    "Strength",
+    "Rooted",
+    "Grappled",
+    "Grappling",
+    "Laughter",
+    "Fire",
+    "Combo:",
+    "Thorns",
+
 ]
 for i in range(len(KEYWORDS_ITALIC)):
     KEYWORDS_ITALIC.append(KEYWORDS_ITALIC[i]+".")
@@ -36,6 +48,7 @@ KEYWORDS_BOLD = [
     "WIS",
     "CHA",
     "X",
+    "+",
 ]
 for i in range(len(KEYWORDS_BOLD)):
     KEYWORDS_BOLD.append(KEYWORDS_BOLD[i]+".")
@@ -52,7 +65,6 @@ CLASSES = [
     "ROG",
     "SOR",
     "WIZ",
-    "All"
 ]
 SCM_DICT = {
     "BRD":"CHA",
@@ -66,6 +78,7 @@ SCM_DICT = {
 
 # @param folder_name: name of folder within assets/cards/ to be deleted and re-generated full of cards from card_list
 def generate_cards(card_list, folder_name):
+    text_color = "#BBBBBB"
     class_font = ImageFont.truetype("arial.ttf", 36)
     type_font = ImageFont.truetype("arial.ttf", 32)
     type_y = 54
@@ -112,32 +125,33 @@ def generate_cards(card_list, folder_name):
                 text_width, text_height = canvas.textsize(card.name, font=name_font)
             x = WIDTH / 2 - text_width / 2
             y = (48 - size) / 2
-            canvas.text((x, y), card.name, font=name_font, fill='#AAAAAA')
+            canvas.text((x, y), card.name, font=name_font, fill=text_color)
         else:
             x = WIDTH / 2 - text_width / 2
             y = 0
-            canvas.text((x, y), card.name, font=name_font, fill='#AAAAAA')
+            canvas.text((x, y), card.name, font=name_font, fill=text_color)
 
         # draw type
         text_width, text_height = canvas.textsize(card.card_type, font=type_font)
         x = WIDTH / 2 - text_width / 2
         y = type_y
-        canvas.text((x, y), card.card_type, font=type_font, fill='#AAAAAA')
+        canvas.text((x, y), card.card_type, font=type_font, fill=text_color)
 
         # draw class
-        text_width, text_height = canvas.textsize(card.dnd_class, font=class_font)
-        x = 2
-        y = HEIGHT - text_height - 2
-        canvas.text((x, y), card.dnd_class, font=class_font, fill='#AAAAAA')
+        if card.dnd_class != '-':
+            text_width, text_height = canvas.textsize(card.dnd_class, font=class_font)
+            x = 2
+            y = HEIGHT - text_height - 2
+            canvas.text((x, y), card.dnd_class, font=class_font, fill=text_color)
 
         # draw attribute
         text_width, text_height = canvas.textsize(card.attribute, font=attr_font)
         x = WIDTH - text_width - 2
         y = HEIGHT - text_height - 2
         if card.attribute == "SCM":
-            canvas.text((x, y), SCM_DICT[card.dnd_class], font=attr_font, fill='#AAAAAA')
+            canvas.text((x, y), SCM_DICT[card.dnd_class], font=attr_font, fill=text_color)
         else:
-            canvas.text((x, y), card.attribute, font=attr_font, fill='#AAAAAA')
+            canvas.text((x, y), card.attribute, font=attr_font, fill=text_color)
 
         # draw description
         desc_list = card.desc.split(' ')
@@ -173,13 +187,13 @@ def generate_cards(card_list, folder_name):
                     word_to_draw = SCM_DICT[card.dnd_class]
                 if word_to_draw in NATURALS_TO_100 or word_to_draw in KEYWORDS_BOLD:
                     text_width, text_height = canvas.textsize(word_to_draw+' ', font=desc_bold)
-                    canvas.text((x, y), word_to_draw, font=desc_bold, fill='#AAAAAA')
+                    canvas.text((x, y), word_to_draw, font=desc_bold, fill=text_color)
                 elif word_to_draw in KEYWORDS_ITALIC:
                     text_width, text_height = canvas.textsize(word_to_draw+' ', font=desc_italic)
-                    canvas.text((x, y), word_to_draw, font=desc_italic, fill='#AAAAAA')
+                    canvas.text((x, y), word_to_draw, font=desc_italic, fill=text_color)
                 else:
                     text_width, text_height = canvas.textsize(word_to_draw+' ', font=desc_font)
-                    canvas.text((x, y), word_to_draw, font=desc_font, fill='#AAAAAA')
+                    canvas.text((x, y), word_to_draw, font=desc_font, fill=text_color)
                 x += text_width
 
             if done:
@@ -190,17 +204,27 @@ def generate_cards(card_list, folder_name):
             text_width, text_height = canvas.textsize(card.pack, font=spell_font)
             x = WIDTH / 2 - text_width / 2
             y = HEIGHT - text_height - 2
-            canvas.text((x, y), card.pack, font=spell_font, fill='#AAAAAA')
+            canvas.text((x, y), card.pack, font=spell_font, fill=text_color)
 
         # save image
+        img_path = "assets/cards/"+folder_name
         if card.dnd_class in CLASSES:
-            img_path = "assets/cards/"+folder_name+"/"+card.dnd_class+"/"+card.name+".png"
+            img_path += "/"+card.dnd_class
         else:
-            img_path = "assets/cards/"+folder_name+"/Other/"+card.name+".png"
+            img_path += "/Other"
+        if card.pack:
+            img_path += "/"+card.pack
+        try:
+            os.mkdir(img_path)
+        except FileExistsError:
+            pass
+        img_path += "/"+card.name+".png"
         cnt = 1
-        while(os.path.exists(img_path)):
-            img_path = "assets/cards/"+folder_name+"/"+card.dnd_class+"/"+card.name+str(cnt)+".png"
-            cnt += 1
+        if os.path.exists(img_path):
+            img_path = img_path[:-4] + str(cnt) + ".png"
+            while(os.path.exists(img_path)):
+                img_path = img_path[:-5] + str(cnt) + ".png"
+                cnt += 1
         img.save(img_path)
 
 def generate_card_back():

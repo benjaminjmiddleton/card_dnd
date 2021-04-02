@@ -1,20 +1,37 @@
 CARD DND TODO
 
-balance numbers on cards
+load in stuff to TTS
+	- card packs
+		- get the card generator to generate cards into folders based on their packs
+	- infinite Wound pile
 
-add basic movement pack
-
-add gun class
+SESSION 0
+	- talk about the fact that the game will change as we go, but i will try not to shaft anyone.
+		- there will be plenty of typos and such, please point them out to me so i can change them!
+	- talk about the goal of the system
+		- speed of combat
+		- simplicity of character sheets (you should have a little less to "remember")
+		- complexity of character optimization (due to deckbuilding)
+		- at the cost of, potentially, some realism.
+	- get each player's race
+	- discuss setting, party's origin, etc.
+	- build each player's character sheet and deck in TTS
+	- talk about how combat will flow
+	- run a short and sweet test combat
 
 story stuff
 
 design cards for the non-basic packs
+	- feypicked
+	- divination
+	- storm sorcery
+	- gunslinger
 
 color the cards based on their card pack and stat
 
 SKILL CHECKS?
 
-not really a to-do, but
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 CLASS SPECIALIZATIONS
 damage
 defence
