@@ -19,9 +19,11 @@ class Monster:
         self.cha = cha
         self.deck = deck
 
+# prompts the user for the needed monsters and returns the corresponding list of Monster objects
 def get_monsters(monster_manual, valid_monster_names, card_list):
     monster_list = []
 
+    # Get list of names of monsters to add
     print('Adding monsters to encounter.')
     adding_monsters = True
     while adding_monsters:
@@ -34,6 +36,7 @@ def get_monsters(monster_manual, valid_monster_names, card_list):
         if 'n' in another or 'N' in another:
             adding_monsters = False
 
+    # Get monster data from .xlsx files
     for monster_it in range(len(monster_list)):
         monster = monster_list[monster_it]
         sheet = monster_manual.sheet_by_name(monster)
@@ -59,6 +62,7 @@ def get_monsters(monster_manual, valid_monster_names, card_list):
                         wis = sheet.cell_value(i+1, j)
                     if sheet.cell_value(i, j) == 'CHA':
                         cha = sheet.cell_value(i+1, j)
+                    # Get deck data
                     if sheet.cell_value(i, j) == 'Example Deck':
                         row = i
                         cell_value = sheet.cell_value(row+1, j)
@@ -72,7 +76,7 @@ def get_monsters(monster_manual, valid_monster_names, card_list):
                                     my_card = card
                                     break
                             if not my_card:
-                                raise CardNotFound
+                                raise Exception('Card Not Found')
                             count = 0
                             while count < copies:
                                 deck.append(my_card)
@@ -90,8 +94,8 @@ def main():
     card_list = read_cards("Cards.xlsx")
     encounter_monsters = get_monsters(monster_manual, monster_names, card_list)
 
-    # for monster in encounter_monsters:
-    #     print(monster.__dict__)
+    for monster in encounter_monsters:
+        print(monster.__dict__)
     #     for card in monster.deck:
     #         print(card.__dict__)
 
