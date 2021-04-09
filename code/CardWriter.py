@@ -34,7 +34,9 @@ KEYWORDS_ITALIC = [
     "Laughter",
     "Fire",
     "Combo:",
+    "Channel:",
     "Thorns",
+    "Prone",
 
 ]
 for i in range(len(KEYWORDS_ITALIC)):
@@ -65,6 +67,7 @@ CLASSES = [
     "ROG",
     "SOR",
     "WIZ",
+    "WLK",
 ]
 SCM_DICT = {
     "BRD":"CHA",

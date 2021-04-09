@@ -1,16 +1,8 @@
 CARD DND TODO
 
-add racial cards
-pass tokens for TTS
-cost of resummoning feypicked elk
+load in setting tables
 
-story stuff
-
-design cards for the non-basic packs
-	- feypicked
-	- divination
-	- storm sorcery
-	- gunslinger
+SESSION 1
 
 revamp skill and saving draws using modifiers and optional deck
 
@@ -32,6 +24,9 @@ DRUID
 Feypicked - 20% healing, 20% buff, 40% damage, 20% defence
 <spellcaster> - 60% healing, 20% damage, 20% buff
 <shapeshifter> - 40% defence, 20% healing, 20% buff, 20% damage
+
+FIGHTER
+Gunslinger - 20% debuff, 60% defence, 20% damage
 
 PALADIN
 <defender build> - 20% healing, 60% defence, 20% damage

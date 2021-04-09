@@ -7,15 +7,97 @@ within mere miles of land. Whether by wrath of Selune the Moon Goddess or by whi
 have become a thing to be feared, and the oceans a dauting path to travel.
 	- Corellon, the High Elvish city-island, survives through sheer force of meteorological wizardry
 	- Volkan vo Moradin, the tunnels beneath, and the gnomish isles, of course, have been largely unaffected.
-	- Many wood-elvish, orcish, and beastfolk settlements have been wiped out
+	- Many wood-elvish, orcish, and beastfolk settlements have been wiped out or have been forced to battle for high enough ground to survive.
 
-INTRO
-A ship of ~400 people came from Corellon to the long-unexplored and dangerous land of Jolyu in search of Storm
-Crystals -- magical crystals that the aforementioned elvish wizards are consuming to keep the city afloat.
+SESSION 1
+(balance change - ian's elk has double hp now)
+also, grab and save the Elk deck from ian
 
-- manned by Parken and one other storm sorcerer to ensure safety of passage
-- shipwrecked (by what?)
+The port town of Sallman has been facing hardship due to the newly high tides causing increasingly intense floods every few weeks.
+Communication with their main trading partners, the Wood Elves of Gildes-il, has been difficult due to fear of traders' ships or caravans
+being ruined by the tides and storms. It has been decided that a ship of the town's strongest sailors will sail to Corellon to negotiate
+with the High Elves that live there, many of whom are famously powerful wizards, hoping to employ one to protect Sallman from
+the encroaching floods.
+
+Setting: Sallman
+- was once the greatest port city on Maseutoji, and indeed, the greatest city Man has ever built
+- now few buildings remain, as port cities have been hit the hardest with the storms.
+- many have fled south, choosing to take their chances with the Desert Orcs of Grumbarck rather than brave the storms.
+
+PARKEN:
+Alder can somewhat optionally roleplay with his family, who is finally proud of him. He has been chosen for this dangerous mission
+to preserve their dear homes. Although he was not in the Navy like his family had wished, this is a noble journey and he will
+be loved if he can return successfully.
+
+<Ian can optionally roleplay as the captian or a Sallman noble with any personality he likes>
+
+Luckily, the craftsmen of Sallman design the strongest ships yet seen in this world, because they needed it to survive the storms
+that they faced on their two-week journey. Storms batter the ship a handful of times, and each time they nearly capsize the ship.
+The lives of a few brave men are lost as they are swept away by the storms.
+
+Setting: Corellon
+- Tall white walls of marble and granite around the outskirts of the island
+- The largest tree you've ever seen, stretching for what seems like a mile into the sky
+- beautiful staircases up the trees and all kinds of buildings and structures in the boughs
+- Lady of the City Edendra Larethian is said to have descended from Corellon Larethian herself
+
+The exhausted group of sailors arrive, and in the following week, the captain of the ship and a few nobles negotiate
+with the leaders of Corellon. It is made clear that the elves are having trouble warding off the storms as well.
+The elves are shocked that the humans were able to get here alive without any kind of spellcaster, and insist the storms must
+not have been bad. They could spare a strong, well-paid wizard to be sure, but they would require the same thing that Corellon runs
+dangerously low on now--storm crystals. These crystals of pure elemental energy are used as fuel for the wizards' strongest
+meteorological spells, and running out would be deadly for the entire city.
+
+KACY, SOMETIME DURING THE WEEK OF NEGOTIATION:
+Arialith has been training for a long time to hone her divination skills. She was able to have her first vision in her master's
+Palantir today, but she is very anxious about it. The vision was that of a great storm, and a sinking ship. It contained small,
+further visions of ruin to many settlements around the world. Her master seems only amused, however, as he has "seen this too,
+and more. There is little to truly worry about." This attitude does little to persuade Arialith, though, as her master seems to
+take this carefree stance on nearly every vision. He always talks about how what happens "in this timeline" matters little
+and such. A few days later, he convinces Arialith that she must go on the departing ships to help gather storm crystals and realise
+her true potential as a wizard. "It is true that one of the ships will sink, and some will die. But you will not, and indeed,
+this journey will bring you a new level of practice you have not had until now. That is the way of it."
+
+A fleet of three ships of ~200 people is dispatched from Corellon to the long-unexplored and dangerous land of Jolyu in search
+of Storm Crystals -- magical crystals that the aforementioned elvish wizards are consuming to keep the city afloat. Two are manned
+by elvish spellcasters and sailors, and one is the same ship of Sallman's finest. Three weeks into the journey, a mighty storm
+nearly takes out Arialith and <brynn>'s ship. However, in a moment of intense stress, one of the elf wizards discharges storm energy
+by accident, and a bolt of lightning streaks out towards the Sallman ship, setting its mast and sail on fire. Arialith watches in
+horror as her vision comes true--the ship begins to sink, and screams ring out from the sailors aboard.
+
+Just as the ship starts to go under, a bolt of lightning flies UP from the ocean into the clouds, and a large bubble of swirling water
+rises out of the waters, containing Alder at it center, eyes crackling with lightning, and several sailors carried at the bottom.
+The bubble comes to Arialith's ship and pops, leaving water and frightened crewmates to flop onto the deck of the ship.
+Astonished elves look on as Alder faints after performing an incredible feat of Storm Sorcery.
+
+Alder brings with him the corpse of an elf captain whose skull's been pierced by a large chunk of the mast, which must have exploded.
+It's gruesome, but the three elves aboard the ship decide to each take some of his bullets and one of his three guns.
+
+<The storm subsides, roleplay out next morning>
+
+When they finally land, there is an extremely tall, grey-skinned fellow waiting to meet them. He is stout despite his height, like
+a massive gnome. Ian can roleplay this meeting. The Firbolgs saw the storm from their new home and came to preserve what life they
+could. It is decided that most of the elves should stay back to protect the ships through the nights while a small party goes to
+meet the Firbolgs and find some way to get storm crystals, then report back within a month. (This is our party.)
+
+To get to the small ragged Firbolg settlement, they must adventure through their previous home. This now fetid swampland that used
+to be a lush Feywild is known as the Harpwater Grove.
+
+Setting: Harpwater Grove
+- reeks of rotting flesh, but also freshly cut plants, like lawn clippings
+- Zombie fey, such as satyrs and sprites, get a CON Draw 2 before death to survive.
+- blinking Will-o'-Wisps tempt travelers off what little trail there is.
+	Without Chital, the group would stand no chance of getting through.
+- The animals and fey folk there are being reanimated by a distant Necromancer.
+	The Necromancer cult has always been a pest to the nature-loving Firbolgs, but they are not a warlike folk, and they did not
+	used to have so much power. In recent days, the storms have killed many, and the stench of death pervading the air gives them
+	tremendous power.
+- Wights also roam these lands, as with the rest of Jolyu.
+
+After a few encounters, the group makes it to the unnamed settlement of Firbolg that used to live throughout the Harpwater. We can
+end the session here, or roleplay introductions with the elders of the tribe (main elder is named Brobalar). They are sympathetic with
+the elves' cause of collecting storm crystals, but they refuse to help set up a mining expedition, as it would only harm the land
+they love further. Instead, they can offer supplies and shelter if the group helps to take out the necromancers terrorizing the land,
+who they claim are holding storm crystals (though it's unclear whether this claim is true).
 
 First major arc should be cetered around keeping the shipwrecked elves and the elves of Corellon safe.
-
-SKILL ROLLS
